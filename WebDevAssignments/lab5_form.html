@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Assignment 5: HTML Forms and Validation</title>
+    <style>
+        body {
+            background-color: rgb(158, 113, 138);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold
+        }
+        form {
+            background-color: rgb(228, 207, 207);
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" method="get">
+        <h2>Contact Us</h2>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" required placeholder="Enter First Name">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" required maxlength="50" placeholder="Enter Last Name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="name@example.com" title="All titles are expected to be in the displayed format">
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required placeholder="123-456-7890" pattern="^\d{3}-\d{3}-\d{4}$" title="All numbers are expected to be in the displayed format">
+            <label for="address1">Address Line 1:</label>
+            <input type="text" id="address1" required placeholder="123 Main St">
+            <label for="address2">Address Line 2:</label>
+            <input type="text" id="address2" placeholder="Apartment/Suite, etc.">
+            <label for="city">City:</label>
+            <input type="text" id="city" required placeholder="City">
+            <select>
+                <option>Indiana</option>
+                <option>Illinois</option>
+                <option>Ohio</option>
+                <option>Michigan</option>
+                <option>Kentucky</option>
+                <option>Wisconsin</option>
+                <option>Missouri</option>
+                <option>Florida</option>
+            </select>
+            <input type="text" required pattern="^\d{5}$" title="5 digits only" placeholder="Zip Code">
+        </fieldset>
+        <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required minlength="5" placeholder="Enter Username" title="Minimum Length of 5 Characters">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required minlength="8" placeholder="Enter Password" title="Minimum Length of 8 Characters">
+            <label for="DOB">Date of Birth:</label>
+            <input type="date" id="DOB" required min="18" max="100">
+            <label for="Website">Personal Website:</label>
+            <input type="url" id="Website" placeholder="https://example.com" title="All URLs are expected to be in the displayed format">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" accept=".pdf,.docx">
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="contactmethod">Preferred Contact Method:</label>
+            <label for="prefemail">Email</label>
+            <input type="radio" id="prefemail" name="contactmethod" value="email" required>
+            <label for="prefphone">Phone</label>
+            <input type="radio" id="prefphone" name="contactmethod" value="phone">
+            <label for="prefmail">Mail</label>
+            <input type="radio" id="prefmail" name="contactmethod" value="mail">
+            <br>
+            <label for="reason">Reason for Contact:</label>
+            <select name="reason" required>
+                <option>Inquiries</option>
+                <option>Sales</option>
+                <option>Order Status</option>
+                <option>Feedback</option>
+                <option>Other</option>
+            </select>
+
+            <br>
+
+            <label for="Interests">Interests:</label>
+            <select multiple name="interests">
+                <option>Newsletter</option>
+                <option>Promotions</option>
+                <option>Events</option>
+                <option>Updates</option>
+            </select>
+            <textarea name="comments" maxlength="500" rows="4" cols="50" placeholder="Additional Comments"></textarea>
+            <p style="font-size: 15px;">Maximum 500 Characters</p>
+            <label for="terms">I agree to the terms and conditions</label>
+            <input type="checkbox" id="terms" required name="terms">
+            <br>
+            <br>
+            <label for="submit">Submit:</label>
+            <input type="submit" value="Submit" name="submit">
+            <label for="reset">Reset:</label>
+            <input type="reset" value="Reset" name="reset">
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2: Layout and Embed</title>
+    <style> body {
+        background-color: rgb(126, 93, 179); color: rgb(0, 0, 0);
+        }
+        table, th {
+            border-color: black;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        nav>p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav>ul>li{
+            display:inline;
+            padding-left: 0px;
+            padding-right: 5px;
+            text-align:right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="#Block">Block vs Inline</a></li>
+                <li> <a href="#Embed">Embedded Content</a></li>
+                <li> <a href="#Lists">Lists</a></li>
+                <li> <a href="#Table">Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="Block">Block vs Inline Elements</h1>
+    <p>Block and inline elements are interesting as to my understanding, Block elements take much more space due to forcing a new line. Inline elements do not force a new line, and therefore conserve a lot of space and follow previous content.</p>
+    <h3>This heading lvl3 and the following are a block elements:<br><br> I always add color because white light gives me migraines</h3>
+    <div>
+        <p>This is a paragraph inside of the div</p>
+    </div>
+    <p>This is a paragraph outside the div</p>
+    <h3>The following are inline elements:</h3>
+    <p> <span> This is inside a span</span> <br> <a href="https://www.w3schools.com/tags/tag_a.asp">This is a link to the A attribute</a> <br> <strong> This is strong worded</strong><br><em>This is emphasized</em> <br>background-color for this assignment is <code>rgb(126, 93, 179)</code></p>
+<br><br>
+<iframe id="Embed" width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU?si=Zou3YzneWjsO0p7x" title="HTML Tutorial for Beginners: HTML Crash Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>">
+
+<h2 id="Lists">My Simple Weekly Planner</h1>
+<ul>
+    <li>YouTube</li>
+    <li>W3Schools</li>
+    <li>MDN</li> 
+    <li>a notebook</li>
+    <li>a friend</li>
+</ul>
+
+<h2>My routine when I study</h2>
+<ol>
+    <li>Look over exam requirements</li>
+    <li>Set a 30 minute timer</li>
+    <li>Formulate a study guide based on priority</li>
+    <li>Look over course provided book</li>
+    <li>Study provided powerpoints</li>
+    <li>Study online websites for other explanations</li>
+    <ol>
+        <li>I study specific topics based on gaps in memory from lectures</li>
+        <li>Less I remember a subject, more time is dedicated to it</li>
+    </ol>
+</ol>
+
+
+<table id="Table">
+    <caption style="font-weight: bold; font-size: 18px;">Study Tracker Table</caption>
+    <tr>
+        <th>Day</th>
+        <th>Topic</th>
+        <th>Time Spent (minutes)</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <th>Monday</th>
+        <th>Science</th>
+        <th>40</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <th>Tuesday</th>
+        <th>Social Studies</th>
+        <th>30</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <th>Wednesday</th>
+        <th>Biology</th>
+        <th>30</th>
+        <th>Done</th>
+    </tr>
+    <tr>
+        <th>Thursday</th>
+        <th>English Language</th>
+        <th>25</th>
+        <th>In Progress</th>
+    </tr>
+    <tr>
+        <th>Friday</th>
+        <th>Psychology</th>
+        <th>45</th>
+        <th>Not Started</th>
+    </tr>
+</table>
+
+</body>
+</html>

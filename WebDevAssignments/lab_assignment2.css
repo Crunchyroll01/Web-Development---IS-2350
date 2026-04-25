@@ -1,0 +1,18 @@
+a{
+    font: 16px sans-serif;
+}
+body{
+    background-color: lightcoral;
+}
+body > a {
+    color: darkblue;
+    font-style: italic;
+    text-decoration: none;
+}
+img {
+    border-radius: 10px;
+}
+p {
+    font-weight: 700;
+    color: darkblue;
+}
