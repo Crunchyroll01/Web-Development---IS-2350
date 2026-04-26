@@ -13,11 +13,61 @@
                 <li><a href="Home.html">Home</a></li>
                 <li id="projectNav"><a href="Speakers.html">Our Speakers</a></li>
                 <li><a href="EventSchedule.html">Event Schedule</a></li>
-                <li><a href="tickets.html">Tickets</a></li>
-                <li><a href="venue.html">The Venue</a></li>
+                <li><a href="Tickets.html">Tickets</a></li>
+                <li><a href="Venue.html">The Venue</a></li>
                 <li><a href="CV.html">My CV</a></li>
             </ul>
         </nav>
     </header>
+    
+    <div id="TicketContent">
+        <h1>Get Your Tickets</h1>
+        <p>Don't miss out on this exciting event! Secure your spot by purchasing your tickets today.</p>
+        <p><strong>Ticket Options:</strong></p>
+        <ul>
+            <li><strong>General Admission:</strong> $50</li>
+            <li><strong>Student Admission:</strong> $15 (with valid ID, includes free access to networking)</li>
+            <li><strong>VIP Admission:</strong> $75 (includes exclusive access to speakers and networking opportunities)</li>
+        </ul>
+    </div>
+
+    <div id="TicketPurchase">
+        <h2>Purchase Your Tickets</h2>
+        <p>An email confirmation will be sent to you upon successful purchase.</p>
+        <form autocomplete="on">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="ticketType">Select Ticket Type:</label><br>
+            <select id="ticketType" name="ticketType" onchange="updateTotal()" required>
+                <option value="none">--Please choose an option--</option>
+                <option value="general">General Admission - $50</option>
+                <option value="student">Student Admission - $15</option>
+                <option value="vip">VIP Admission - $75</option>
+            </select><br><br>
+
+            <label for="imageUpload">Upload Proof of Student Status (if applicable):</label><br>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*"><br><br>
+
+            <label for="payment">Payment Information:</label><br>
+            <input type="text" id="payment" name="payment" maxlength="19" placeholder="Card Number" required><br><br>
+            
+            <label for="expiryYear">Expiration:</label><br>
+            <input type="date" id="expiryYear" name="expiryYear" placeholder="YYYY" required><br><br>
+            
+            <label for="cvv">CVV:</label><br>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required maxlength="3"><br><br>
+
+            <label for="TicketTotal" id="TicketTotal">Total: $0.00</label><br><br>
+            
+            <input id="PurchaseButton" type="submit" value="Purchase Tickets">
+        </form>
+
+    </div>
+
+    <script src="MyJS.JS"></script>
 </body>
 </html>
