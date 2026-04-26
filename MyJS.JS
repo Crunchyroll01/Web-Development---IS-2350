@@ -9,3 +9,12 @@ function updateTotal() {
         document.getElementById("TicketTotal").textContent = "Total: $0.00";
     }
 }
+
+const navToggle = document.getElementById('nav-toggle');
+const navList = document.getElementById('navlist');
+
+if (navToggle && navList) {
+    navToggle.addEventListener('click', function () {
+        navList.classList.toggle('open');
+    });
+}

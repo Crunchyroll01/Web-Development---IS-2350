@@ -23,6 +23,9 @@ nav > ul {
     font-size: 20px;
     font-weight:300;
 }
+#nav-toggle {
+    display: none;
+}
 nav > ul > li > a{
     color: #D5B2A8;
     text-decoration: none;
@@ -615,6 +618,29 @@ nav > ul > li > a:hover {
             width: 80%;
         }
     }
+
+    #nav-toggle {
+    display: block;
+    color: #D5B2A8;
+    font-size: 24px;
+    cursor: pointer;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    }
+    #navlist {
+        display: none;
+    }
+    #navlist.open {
+        display: block;
+        padding: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        li {
+            padding-bottom: 2px;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -676,7 +702,26 @@ nav > ul > li > a:hover {
     .speakers-header {
         width: 80%;
     }
-    #NavList {
-        width: 100vw;
+    #nav-toggle {
+        display: block;
+        color: #D5B2A8;
+        font-size: 24px;
+        cursor: pointer;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+    #navlist {
+        display: none;
+    }
+    #navlist.open {
+        display: block;
+        padding: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        li {
+            padding-bottom: 2px;
+        }
     }
 }
